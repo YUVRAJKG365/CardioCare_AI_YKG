@@ -25,22 +25,6 @@
 - `StandardScaler`: For input normalization
 - Pre-trained models and scalers stored in `exported_models/`
 
----
-
-## 📂 Project Structure
-
-CardioCare_AI_YKG/
-├── exported_models/
-│ ├── heart_disease_model_final.pkl
-│ ├── scaler_final.pkl
-│ ├── scaler_hd.joblib
-│ └── xgb_early_hd_model.joblib
-├── early_heart_disease_detection_dataset.csv
-├── heart_disease_2020_2025.csv
-├── hp.py ← Main Streamlit App
-├── ht.py ← Auxiliary script
-├── hdt.ipynb ← Notebook for training/EDA
-└── README.md
 
 yaml
 Copy
