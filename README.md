@@ -52,6 +52,23 @@ Includes all above, plus:
 
 ---
 
+## 🚫 Usage Restrictions
+
+**IMPORTANT:**
+- **You are NOT allowed to copy, clone, reuse, or redistribute any part of this code, design, or content.**
+- This repository is **NOT open-source**.
+- Any unauthorized usage of this code or its components is strictly prohibited and may lead to legal action.
+
+---
+
+## ⚠️ Disclaimer
+
+This project is meant exclusively for **personal, non-commercial purposes**.  
+If you are interested in building your own portfolio, please create your own design and implementation rather than using this one.
+
+---
+
+
 ## ⚙️ How to Run
 
 ### 1. Clone the Repository
