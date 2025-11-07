@@ -1,7 +1,7 @@
-# Core app
-streamlit==1.26.0
+# App runtime (allow newer Streamlit that supports NumPy 2.x)
+streamlit>=1.51.0
 
-# Numeric & data
+# Numeric & data (use wheels that avoid building from source)
 numpy==2.3.4
 pandas==2.3.3
 
@@ -19,4 +19,4 @@ fpdf2==2.6.0
 
 # Utilities
 python-dateutil==2.8.2
-pytz==2024.7
+pytz==2025.2
