@@ -1,22 +1,22 @@
 # App runtime (allow newer Streamlit that supports NumPy 2.x)
-streamlit>=1.51.0
+streamlit
 
 # Numeric & data (use wheels that avoid building from source)
-numpy==2.3.4
-pandas==2.3.3
+numpy
+pandas
 
 # ML model loading & preprocessing
-scikit-learn==1.2.2
-joblib==1.3.2
-xgboost==1.7.6
+scikit-learn
+joblib
+xgboost
 
 # Visualization & plotting
-plotly==5.15.0
-matplotlib==3.8.0
+plotly
+matplotlib
 
 # PDF generation
-fpdf2==2.6.0
+fpdf2
 
 # Utilities
-python-dateutil==2.8.2
-pytz==2025.2
+python-dateutil
+pytz
