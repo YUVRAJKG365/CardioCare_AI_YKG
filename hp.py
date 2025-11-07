@@ -169,10 +169,28 @@ with st.sidebar:
     """, unsafe_allow_html=True)
 
     st.markdown("""
-    <div style='margin-top: 20px;'>
-    <p>Developed by</p>
-    <p>Yuvraj Kumar Gond</p>
-    <p>Version 2.1.0</p>
+    <div style="margin-top:20px; text-align:center;">
+      <p style="margin:0; color:#cfe8ff; font-weight:600; font-size:13px;">Developed by</p>
+      <h3 style="
+            margin:6px 0 4px;
+            font-family: 'Montserrat', sans-serif;
+            font-size:20px;
+            background: linear-gradient(90deg, #ffb347 0%, #ff6a88 50%, #7f00ff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight:800;
+            text-transform:uppercase;
+            letter-spacing:1.8px;
+            text-shadow: 0 6px 22px rgba(127,0,255,0.18);
+            ">
+        YUVRAJ KUMAR GOND
+      </h3>
+      <p style="margin:0; color:#e6fff8; font-weight:700; font-size:12px;">
+        Version <span style="background:linear-gradient(90deg,#005f73,#0a9396); color:#fff; padding:5px 10px; border-radius:14px; box-shadow:0 6px 18px rgba(10,147,150,0.18); font-weight:800;">3.0.0</span>
+      </p>
+      <div style="margin-top:8px;">
+        <span style="display:inline-block; width:70px; height:6px; background:linear-gradient(90deg,#ffd700,#ff6a00,#ff2d95); border-radius:4px; box-shadow:0 6px 18px rgba(255,106,149,0.12);"></span>
+      </div>
     </div>
     """, unsafe_allow_html=True)
 
