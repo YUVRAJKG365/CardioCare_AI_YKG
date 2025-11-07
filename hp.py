@@ -114,7 +114,7 @@ st.markdown("""
 
 
 @st.cache_resource
-def load_models(base_dir=r"exported_models\"):
+def load_models(base_dir=r"exported_models"):
     files = {
         "early_model": "xgb_early_hd_model.joblib",
         "hd_model": "heart_disease_model_final.pkl",
