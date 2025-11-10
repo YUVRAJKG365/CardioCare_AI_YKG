@@ -469,67 +469,115 @@ if app_mode == "Home":
 
     st.markdown("---")
 
-    # Diet Quality Rating Information
+    # Diet Quality Rating Information - FIXED VERSION
     st.markdown("""
     <div class='custom-card'>
         <h3>🍽️ Diet Quality Score Guide</h3>
         <p>Understanding how diet quality is measured (1-10 scale):</p>
-        
-        <div style='display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px;'>
-            <div>
-                <h4 style='color: #e63946;'>Poor Diet (1-3)</h4>
-                <ul style='padding-left: 20px;'>
-                    <li>High in processed foods & sugars</li>
-                    <li>Low fruit & vegetable intake</li>
-                    <li>Frequent fast food consumption</li>
-                    <li>High saturated & trans fats</li>
-                    <li>Excessive sodium intake</li>
-                </ul>
-            </div>
-            <div>
-                <h4 style='color: #f4a261;'>Average Diet (4-6)</h4>
-                <ul style='padding-left: 20px;'>
-                    <li>Mixed diet with some healthy choices</li>
-                    <li>Moderate fruit & vegetable intake</li>
-                    <li>Occasional processed foods</li>
-                    <li>Balanced macronutrients</li>
-                    <li>Moderate portion sizes</li>
-                </ul>
-            </div>
-            <div>
-                <h4 style='color: #2a9d8f;'>Good Diet (7-8)</h4>
-                <ul style='padding-left: 20px;'>
-                    <li>Regular fruit & vegetable consumption</li>
-                    <li>Lean protein sources</li>
-                    <li>Whole grains & fiber</li>
-                    <li>Limited processed foods</li>
-                    <li>Healthy cooking methods</li>
-                </ul>
-            </div>
-            <div>
-                <h4 style='color: #264653;'>Excellent Diet (9-10)</h4>
-                <ul style='padding-left: 20px;'>
-                    <li>Predominantly plant-based foods</li>
-                    <li>Rich in antioxidants & nutrients</li>
-                    <li>Minimal processed foods</li>
-                    <li>Healthy fats (omega-3, olive oil)</li>
-                    <li>Proper hydration & portion control</li>
-                </ul>
-            </div>
-        </div>
-        
-        <div style='background: linear-gradient(90deg, #e63946, #f4a261, #2a9d8f, #264653); 
-                    height: 20px; border-radius: 10px; margin: 20px 0; position: relative;'>
-            <div style='position: absolute; left: 15%; top: -25px;'>1-3</div>
-            <div style='position: absolute; left: 35%; top: -25px;'>4-6</div>
-            <div style='position: absolute; left: 65%; top: -25px;'>7-8</div>
-            <div style='position: absolute; left: 85%; top: -25px;'>9-10</div>
-        </div>
-        
-        <p><strong>Note:</strong> A higher diet quality score significantly reduces cardiovascular risk factors 
-        including obesity, high blood pressure, and cholesterol levels.</p>
     </div>
     """, unsafe_allow_html=True)
+    
+    # Using Streamlit columns and components instead of pure HTML
+    col1, col2 = st.columns(2)
+    
+    with col1:
+        st.markdown("""
+        <div style='background: rgba(230, 57, 70, 0.1); padding: 15px; border-radius: 10px; border-left: 4px solid #e63946; margin-bottom: 15px;'>
+            <h4 style='color: #e63946; margin: 0;'>Poor Diet (1-3)</h4>
+        </div>
+        """, unsafe_allow_html=True)
+        st.markdown("""
+        - High in processed foods & sugars
+        - Low fruit & vegetable intake  
+        - Frequent fast food consumption
+        - High saturated & trans fats
+        - Excessive sodium intake
+        """)
+        
+        st.markdown("""
+        <div style='background: rgba(42, 157, 143, 0.1); padding: 15px; border-radius: 10px; border-left: 4px solid #2a9d8f; margin-bottom: 15px;'>
+            <h4 style='color: #2a9d8f; margin: 0;'>Good Diet (7-8)</h4>
+        </div>
+        """, unsafe_allow_html=True)
+        st.markdown("""
+        - Regular fruit & vegetable consumption
+        - Lean protein sources
+        - Whole grains & fiber
+        - Limited processed foods
+        - Healthy cooking methods
+        """)
+    
+    with col2:
+        st.markdown("""
+        <div style='background: rgba(244, 162, 97, 0.1); padding: 15px; border-radius: 10px; border-left: 4px solid #f4a261; margin-bottom: 15px;'>
+            <h4 style='color: #f4a261; margin: 0;'>Average Diet (4-6)</h4>
+        </div>
+        """, unsafe_allow_html=True)
+        st.markdown("""
+        - Mixed diet with some healthy choices
+        - Moderate fruit & vegetable intake
+        - Occasional processed foods
+        - Balanced macronutrients
+        - Moderate portion sizes
+        """)
+        
+        st.markdown("""
+        <div style='background: rgba(38, 70, 83, 0.1); padding: 15px; border-radius: 10px; border-left: 4px solid #264653; margin-bottom: 15px;'>
+            <h4 style='color: #264653; margin: 0;'>Excellent Diet (9-10)</h4>
+        </div>
+        """, unsafe_allow_html=True)
+        st.markdown("""
+        - Predominantly plant-based foods
+        - Rich in antioxidants & nutrients
+        - Minimal processed foods
+        - Healthy fats (omega-3, olive oil)
+        - Proper hydration & portion control
+        """)
+    
+    # Visual scale
+    st.markdown("""
+    <div style='margin: 20px 0;'>
+        <p><strong>Diet Quality Scale:</strong></p>
+    </div>
+    """, unsafe_allow_html=True)
+    
+    # Create the gradient scale using columns
+    scale_col1, scale_col2, scale_col3, scale_col4 = st.columns(4)
+    
+    with scale_col1:
+        st.markdown("""
+        <div style='background: #e63946; height: 20px; border-radius: 10px 0 0 10px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;'>
+            1-3
+        </div>
+        <p style='text-align: center; margin: 5px 0; font-size: 12px;'>Poor</p>
+        """, unsafe_allow_html=True)
+    
+    with scale_col2:
+        st.markdown("""
+        <div style='background: #f4a261; height: 20px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;'>
+            4-6
+        </div>
+        <p style='text-align: center; margin: 5px 0; font-size: 12px;'>Average</p>
+        """, unsafe_allow_html=True)
+    
+    with scale_col3:
+        st.markdown("""
+        <div style='background: #2a9d8f; height: 20px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;'>
+            7-8
+        </div>
+        <p style='text-align: center; margin: 5px 0; font-size: 12px;'>Good</p>
+        """, unsafe_allow_html=True)
+    
+    with scale_col4:
+        st.markdown("""
+        <div style='background: #264653; height: 20px; border-radius: 0 10px 10px 0; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;'>
+            9-10
+        </div>
+        <p style='text-align: center; margin: 5px 0; font-size: 12px;'>Excellent</p>
+        """, unsafe_allow_html=True)
+    
+    # Note
+    st.info("**Note:** A higher diet quality score significantly reduces cardiovascular risk factors including obesity, high blood pressure, and cholesterol levels.")
 
     st.markdown("---")
 
