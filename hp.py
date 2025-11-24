@@ -252,8 +252,16 @@ def generate_pdf_report(patient_data, prediction_data, mode):
     pdf.cell(0, 8, f"Report generated on: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}", 0, 1)
     pdf.cell(0, 8, "CardioCare AI - Advanced Cardiac Risk Assessment", 0, 1, 'C')
 
-    # Save to bytes
-    return pdf.output(dest='S').encode('latin1')
+    # Save to bytes robustly (works if output returns str, bytes or bytearray)
+    result = pdf.output(dest='S')
+    if isinstance(result, bytearray):
+        pdf_bytes = bytes(result)
+    elif isinstance(result, bytes):
+        pdf_bytes = result
+    else:
+        pdf_bytes = result.encode('latin1')
+
+    return pdf_bytes
 
 
 # === GAUGE VISUALIZATION ===
